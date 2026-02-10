@@ -6,7 +6,7 @@ To compute the models, I used the Robyn library.
 Starting from the script Data_campaigns.R, I processed the dataset containing the company’s advertising expenditures across different platforms and advertisement types.
 I performed data cleaning with the goal of making the process as automated as possible. Since the original data was provided in a format where each row represented a single advertisement, I aggregated the data into a tabular structure suitable for modeling, with the following format:
 
-(date | plt1_advtype1 | plt1_advtype2 | plt2_advtype1 | plt2_advtype2).
+(date | plt1_advtype1 | plt1_advtype2 | plt2_advtype1 | plt2_advtype2 | ...).
 
 The Data_preparation.R script was subsequently developed to integrate contextual variables with the campaign data produced in Data_campaigns.R. Considering the automotive market context, external macroeconomic and sector-specific indicators were included, such as interest rates, inflation rates, fuel prices, unemployment rates, vehicle registration time series, and vehicle trade volumes.
 Additionally, this script was used to assess the correlation between the model features and the target variables (leads and revenue), supporting informed feature selection.
